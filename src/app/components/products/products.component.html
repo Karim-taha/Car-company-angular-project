@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <th>No.</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of products, let i = index"> <!-- [hidden] = "prod.quantity == 0"-->
+      <td>{{i+1}}</td>
+      <td>{{prod.name}}</td>
+      <td>{{prod.price|currency}}</td>
+      <td>
+        <span *ngIf="prod.quantity == 0" class="allSold">All cars sold</span>
+        <span *ngIf="prod.quantity == 1" class="lastItem">Last Item</span>
+        <span *ngIf="prod.quantity > 1">{{prod.quantity}}</span>
+      </td>
+  </tr>
+
+  </tbody>
+</table>

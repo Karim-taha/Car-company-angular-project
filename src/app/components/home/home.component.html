@@ -1,0 +1,67 @@
+
+<div class="container my-5">
+  <div class="row">
+
+    <div class="col-4 mt-5 text-center">
+<h3>{{cInfo1.name}}</h3>
+<img src="{{cInfo1.logo}}" alt="">
+<br>
+<button class="btn btn-success mt-2 mb-3" (click)="features1()">Features</button>
+<ol *ngIf="isServiceDisplayed1">
+  <li *ngFor="let serv of cInfo1.services">{{serv}}</li>
+</ol>
+</div>
+
+<div class="col-4 mt-5 text-center">
+  <h3>{{cInfo2.name}}</h3>
+  <img src="{{cInfo2.logo}}" alt="">
+  <br>
+  <button class="btn btn-success mt-2 mb-3" (click)="features2()">Features</button>
+  <ol *ngIf="isServiceDisplayed2">
+    <li *ngFor="let serv of cInfo2.services">{{serv}}</li>
+  </ol>
+  </div>
+
+  <div class="col-4 mt-5 text-center">
+    <h3>{{cInfo3.name}}</h3>
+    <img src="{{cInfo3.logo}}" alt="">
+    <br>
+    <button class="btn btn-success mt-2 mb-3" (click)="features3()">Features</button>
+    <ol *ngIf="isServiceDisplayed3">
+      <li *ngFor="let serv of cInfo3.services">{{serv}}</li>
+    </ol>
+    </div>
+
+    <div class="col-4 mt-5 text-center">
+      <h3>{{cInfo4.name}}</h3>
+      <img src="{{cInfo4.logo}}" alt="">
+      <br>
+      <button class="btn btn-success mt-2 mb-3" (click)="features4()">Features</button>
+      <ol *ngIf="isServiceDisplayed4">
+        <li *ngFor="let serv of cInfo4.services">{{serv}}</li>
+      </ol>
+      </div>
+
+      <div class="col-4 mt-5 text-center">
+        <h3>{{cInfo5.name}}</h3>
+        <img src="{{cInfo5.logo}}" alt="">
+        <br>
+        <button class="btn btn-success mt-2 mb-3" (click)="features5()">Features</button>
+        <ol *ngIf="isServiceDisplayed5">
+          <li *ngFor="let serv of cInfo5.services">{{serv}}</li>
+        </ol>
+        </div>
+
+        <div class="col-4 mt-5 text-center">
+          <h3>{{cInfo6.name}}</h3>
+          <img src="{{cInfo6.logo}}" alt="">
+          <br>
+          <button class="btn btn-success mt-2 mb-3" (click)="features6()">Features</button>
+          <ol *ngIf="isServiceDisplayed6">
+            <li *ngFor="let serv of cInfo6.services">{{serv}}</li>
+          </ol>
+          </div>
+
+
+</div>
+</div>

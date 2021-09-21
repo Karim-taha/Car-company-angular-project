@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <th>No.</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Available Quantity</th>
+    <th>Needed Quantity</th>
+    <th>Buy</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prd of getProductByCatId(), let i = index"> <!-- [hidden] = "prd.quantity == 0"-->
+      <td>{{i+1}}</td>
+      <td>{{prd.name}}</td>
+      <td>{{prd.price|currency}}</td>
+      <td>
+        <span *ngIf="prd.quantity == 0" class="allSold">All cars sold</span>
+        <span *ngIf="prd.quantity == 1" class="lastItem">Last Item</span>
+        <span *ngIf="prd.quantity > 1">{{prd.quantity}}</span>
+      </td>
+      <td><input #Pcount type="number"></td>
+      <td><button class="btn btn-primary" (click)="TotalPrice(prd.price,Pcount.value)">Buy</button> </td>
+  </tr>
+
+  </tbody>
+</table>
+
+<div class="bg-success text-white">Total Price : {{total|currency}}</div>

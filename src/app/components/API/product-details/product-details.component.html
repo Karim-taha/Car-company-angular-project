@@ -1,0 +1,15 @@
+<a class="btn btn-danger mt-3" [routerLink]="['/myproduct']">Back </a>
+
+<div class="d-flex justify-content-center my-5">
+  <div class="card" style="width: 18rem">
+    <img
+      class="card-img-top"
+      src="https://dummyimage.com/300x300/f2eaf2/2a2f69&text={{ prd?.name }}"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ prd.name }}</h5>
+      <p class="card-text">{{ prd.price }}</p>
+    </div>
+  </div>
+</div>
